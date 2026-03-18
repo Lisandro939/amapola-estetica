@@ -1,5 +1,6 @@
 <section id="nosotros" class="py-20 md:py-28 bg-white">
   <div class="mx-auto max-w-5xl px-4">
+    <!-- Header -->
     <div class="text-center mb-16">
       <h2 class="reveal font-heading text-4xl md:text-5xl font-light text-texto mb-6">
         Sobre Nosotros
@@ -12,45 +13,63 @@
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-      <!-- Profesionalismo -->
-      <div class="reveal text-center" style="transition-delay: 0.1s;">
-        <div class="w-16 h-16 mx-auto mb-5 flex items-center justify-center rounded-full bg-arena">
-          <svg class="w-7 h-7 text-amapola" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-          </svg>
+    <!-- Grid -->
+    <div class="flex flex-col md:flex-row gap-8 md:gap-16 items-stretch">
+
+      <!-- LEFT: 3 pillars stacked -->
+      <div class="flex flex-col gap-10 flex-1">
+
+        <!-- Profesionalismo -->
+        <div class="reveal flex flex-col items-center text-center gap-3" style="transition-delay: 0.1s;">
+          <div class="w-12 h-12 flex items-center justify-center rounded-full bg-arena shrink-0">
+            <svg class="w-6 h-6 text-amapola" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+            </svg>
+          </div>
+          <h3 class="font-heading text-2xl font-light text-texto">Profesionalismo</h3>
+          <p class="font-body text-sm font-light text-texto-light leading-relaxed max-w-xs">
+            Formación continua y años de experiencia respaldan cada tratamiento que realizamos.
+          </p>
         </div>
-        <h3 class="font-heading text-2xl font-light text-texto mb-3">Profesionalismo</h3>
-        <p class="font-body text-sm font-light text-texto-light leading-relaxed">
-          Formación continua y años de experiencia respaldan cada tratamiento que realizamos.
-        </p>
+
+        <!-- Personalización -->
+        <div class="reveal flex flex-col items-center text-center gap-3" style="transition-delay: 0.25s;">
+          <div class="w-12 h-12 flex items-center justify-center rounded-full bg-arena shrink-0">
+            <svg class="w-6 h-6 text-amapola" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+            </svg>
+          </div>
+          <h3 class="font-heading text-2xl font-light text-texto">Personalización</h3>
+          <p class="font-body text-sm font-light text-texto-light leading-relaxed max-w-xs">
+            Cada tratamiento se adapta a tus necesidades, tipo de piel y objetivos personales.
+          </p>
+        </div>
+
+        <!-- Calidad -->
+        <div class="reveal flex flex-col items-center text-center gap-3" style="transition-delay: 0.4s;">
+          <div class="w-12 h-12 flex items-center justify-center rounded-full bg-arena shrink-0">
+            <svg class="w-6 h-6 text-amapola" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+            </svg>
+          </div>
+          <h3 class="font-heading text-2xl font-light text-texto">Calidad</h3>
+          <p class="font-body text-sm font-light text-texto-light leading-relaxed max-w-xs">
+            Trabajamos con productos y equipamiento de primera línea para garantizar los mejores resultados.
+          </p>
+        </div>
+
       </div>
 
-      <!-- Personalización -->
-      <div class="reveal text-center" style="transition-delay: 0.25s;">
-        <div class="w-16 h-16 mx-auto mb-5 flex items-center justify-center rounded-full bg-arena">
-          <svg class="w-7 h-7 text-amapola" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-          </svg>
-        </div>
-        <h3 class="font-heading text-2xl font-light text-texto mb-3">Personalización</h3>
-        <p class="font-body text-sm font-light text-texto-light leading-relaxed">
-          Cada tratamiento se adapta a tus necesidades, tipo de piel y objetivos personales.
-        </p>
+      <!-- RIGHT: image placeholder -->
+      <div
+        class="reveal bg-[#EDE0D4] flex items-center justify-center min-h-[260px] order-last md:order-none md:w-[38%]"
+        style="min-height: 400px; transition-delay: 0.2s;"
+      >
+        <span class="font-body text-[0.7rem] font-medium uppercase tracking-[0.2em] text-amapola opacity-50">
+          Foto del local
+        </span>
       </div>
 
-      <!-- Calidad -->
-      <div class="reveal text-center" style="transition-delay: 0.4s;">
-        <div class="w-16 h-16 mx-auto mb-5 flex items-center justify-center rounded-full bg-arena">
-          <svg class="w-7 h-7 text-amapola" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
-          </svg>
-        </div>
-        <h3 class="font-heading text-2xl font-light text-texto mb-3">Calidad</h3>
-        <p class="font-body text-sm font-light text-texto-light leading-relaxed">
-          Trabajamos con productos y equipamiento de primera línea para garantizar los mejores resultados.
-        </p>
-      </div>
     </div>
   </div>
 </section>
