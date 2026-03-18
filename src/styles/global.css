@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-arena: #F5E6D3;
+  --color-arena-light: #FAF3EB;
+  --color-arena-dark: #E8D5BF;
+  --color-amapola: #C23B3B;
+  --color-amapola-light: #D45A5A;
+  --color-amapola-dark: #A32E2E;
+  --color-texto: #3D3028;
+  --color-texto-light: #6B5D52;
+
+  --font-heading: "Cormorant Garamond", serif;
+  --font-body: "Raleway", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-texto);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Scroll reveal animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

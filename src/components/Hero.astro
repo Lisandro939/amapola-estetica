@@ -1,0 +1,51 @@
+---
+import logoImg from "../assets/logo-amapola.jpeg";
+import { Image } from "astro:assets";
+---
+
+<section
+  id="inicio"
+  class="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-arena-light via-arena to-white"
+>
+  <!-- Subtle decorative circles -->
+  <div class="absolute top-20 left-10 w-64 h-64 bg-amapola/5 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-20 right-10 w-80 h-80 bg-arena-dark/20 rounded-full blur-3xl"></div>
+
+  <div class="relative z-10 text-center px-4 py-20">
+    <div class="reveal mb-8">
+      <Image
+        src={logoImg}
+        alt="Logo Estética Amapola"
+        width={160}
+        height={160}
+        class="mx-auto rounded-full shadow-lg object-cover"
+      />
+    </div>
+
+    <h1 class="reveal font-heading text-5xl md:text-7xl font-light text-texto mb-4" style="transition-delay: 0.15s;">
+      Estética Amapola
+    </h1>
+
+    <p class="reveal font-body text-lg md:text-xl font-light text-texto-light max-w-lg mx-auto mb-10" style="transition-delay: 0.3s;">
+      Tu espacio de cuidado personal, donde la belleza se encuentra con el bienestar
+    </p>
+
+    <div class="reveal" style="transition-delay: 0.45s;">
+      <a
+        href="https://wa.me/5402615362369?text=Hola%2C%20quiero%20reservar%20un%20turno"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-block bg-amapola text-white px-8 py-3.5 rounded-full text-sm font-medium tracking-wider uppercase hover:bg-amapola-dark transition-colors shadow-lg hover:shadow-xl"
+      >
+        Reservá tu turno
+      </a>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+    <svg class="w-6 h-6 text-texto-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+    </svg>
+  </div>
+</section>

@@ -1,0 +1,335 @@
+---
+import { Image } from 'astro:assets';
+import depilacion from '../assets/depilacion.png';
+import tratamientosFaciales from '../assets/tratamientos-faciales.png';
+import tratamientosCorporales from '../assets/tratamientos-corporales.png';
+import masajes from '../assets/masajes.png';
+import manicura from '../assets/manicura.png';
+import pestanas from '../assets/pestañas.png';
+
+const NAVBAR_HEIGHT = 68;
+
+const services = [
+  {
+    title: "Depilación",
+    description:
+      "Ofrecemos depilación tradicional y depilación definitiva, adaptada a tu tipo de piel. Atención profesional y personalizada junto con productos y herramientas de calidad.",
+    subTreatments: [
+      "Definitiva Soprano Ice",
+      "Depilación con cera",
+      "Perfilado de cejas",
+      "Laminado de cejas",
+      "Depilación con hilo",
+    ],
+    gradientFrom: "#f8d7d7",
+    gradientTo: "#f0b8b8",
+    cardBg: "#F9F3EC",
+    headerBg: "#F0E8E0",
+    accentColor: "#A63228",
+    icon: "✦",
+    image: depilacion,
+  },
+  {
+    title: "Tratamientos Faciales",
+    description:
+      "Tratamientos específicos para limpieza, renovación y mantenimiento de la piel del rostro. Cada sesión se adapta al tipo de piel y a los objetivos de cada persona.",
+    subTreatments: [
+      "Peeling enzimático",
+      "Peeling de invierno",
+      "Peeling de algas",
+      "Peeling mecánico con punta de diamantes",
+      "Limpieza profunda con extracciones",
+      "Dermaplaning",
+      "Dermapen",
+      "Nano botox",
+      "Hilos líquidos, sólidos y planos",
+      "Radiofrecuencia",
+      "Tratamiento para papada",
+    ],
+    gradientFrom: "#fde8d8",
+    gradientTo: "#f5c9aa",
+    cardBg: "#F5EDE3",
+    headerBg: "#E9DCCF",
+    accentColor: "#A63228",
+    icon: "◈",
+    image: tratamientosFaciales,
+  },
+  {
+    title: "Tratamientos Corporales",
+    description:
+      "Protocolos orientados a mejorar la firmeza, la textura y el aspecto general de la piel corporal. Incluyen opciones modeladoras, reafirmantes, exfoliantes y relajantes.",
+    subTreatments: [
+      "Radiofrecuencia",
+      "Ultracavitación",
+      "Ultrasonido",
+      "Vela Slim",
+      "Criolipólisis",
+      "HiFu",
+      "Electrodos",
+      "Copas colombianas con electrodos",
+      "Teslagen / Body Up",
+      "Mantas térmicas",
+      "Presoterapia",
+    ],
+    gradientFrom: "#d8ead8",
+    gradientTo: "#b8d4b8",
+    cardBg: "#F1E7D9",
+    headerBg: "#E4D4C6",
+    accentColor: "#A63228",
+    icon: "◇",
+    image: tratamientosCorporales,
+  },
+  {
+    title: "Masajes",
+    description:
+      "Momentos de bienestar pensados para aliviar tensiones, activar la circulación y reconectar con tu cuerpo. Técnicas personalizadas según tus necesidades.",
+    subTreatments: [
+      "Relajantes",
+      "Descontracturantes",
+      "Con piedras calientes",
+      "Drenaje linfático",
+      "Reductores",
+    ],
+    gradientFrom: "#e8ddd0",
+    gradientTo: "#d4c4b0",
+    cardBg: "#EDE1D0",
+    headerBg: "#DECBB8",
+    accentColor: "#A63228",
+    icon: "◉",
+    image: masajes,
+  },
+  {
+    title: "Manicuria",
+    description:
+      "Servicio de manicuria profesional con las últimas técnicas para el cuidado y embellecimiento de tus manos. Resultados duraderos y de calidad.",
+    subTreatments: [
+      "Esmaltado semipermanente",
+      "Kapping",
+      "Uñas esculpidas",
+      "Soft gel",
+    ],
+    gradientFrom: "#fdebc8",
+    gradientTo: "#f5cf90",
+    cardBg: "#E9DBC8",
+    headerBg: "#DECBB8",
+    accentColor: "#A63228",
+    icon: "☀",
+    image: manicura,
+  },
+  {
+    title: "Pestañas",
+    description:
+      "Realzá tu mirada con nuestros tratamientos de pestañas. Técnicas profesionales para un efecto natural o dramático, adaptado a lo que buscás.",
+    subTreatments: [
+      "Extensiones",
+      "Permanente",
+      "Lifting",
+      "Tinte",
+      "Keratina y botox",
+    ],
+    gradientFrom: "#e8d8f0",
+    gradientTo: "#d0b8e0",
+    cardBg: "#E5D5C0",
+    headerBg: "#D8C4AC",
+    accentColor: "#A63228",
+    icon: "◎",
+    image: pestanas,
+  },
+];
+---
+
+<section id="servicios" class="services-section">
+  <!-- Section header — scrolls away normally, not sticky -->
+  <div class="services-header">
+    <p class="services-eyebrow font-body">Lo que hacemos</p>
+    <h2 class="reveal font-heading text-texto" style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 300; margin-bottom: 1rem; line-height: 1.1;">
+      Nuestros Servicios
+    </h2>
+    <p class="reveal font-body" style="color: #6B5D52; font-size: 1.125rem; font-weight: 300; transition-delay: 0.1s;">
+      Elegí el tratamiento ideal para vos
+    </p>
+    <div class="reveal w-16 h-px bg-amapola mx-auto" style="margin-top: 2rem; transition-delay: 0.2s;"></div>
+  </div>
+
+  <!-- Stacking cards container -->
+  <div class="stack-container">
+    {services.map((service, i) => {
+      const zIndex = (i + 1) * 10;
+
+      return (
+        <div
+          class="card-wrapper"
+          style={`position: sticky; top: ${NAVBAR_HEIGHT}px; z-index: ${zIndex}; min-height: ${i === services.length - 1 ? 'auto' : '100svh'};`}
+        >
+          <div
+            class="card-inner"
+            style={`background-color: ${service.cardBg}; height: calc(100svh - ${NAVBAR_HEIGHT}px); min-height: calc(100svh - ${NAVBAR_HEIGHT}px); display: flex; flex-direction: column; border-radius: 0; overflow: hidden; box-shadow: 0 -2px 30px rgba(0,0,0,0.08);`}
+          >
+            <!-- Header bar -->
+            <div
+              class="card-header"
+              style={`background-color: ${service.headerBg}; display: flex; align-items: center; padding: 1.2rem 2rem; gap: 1rem; flex-shrink: 0;`}
+            >
+              <!-- Left accent bar -->
+              <div
+                style={`width: 4px; height: 2rem; background-color: ${service.accentColor}; border-radius: 2px; flex-shrink: 0;`}
+              ></div>
+              <!-- Index -->
+              <span
+                class="font-body"
+                style={`font-size: 0.75rem; letter-spacing: 0.2em; font-weight: 500; color: ${service.accentColor}; text-transform: uppercase; flex-shrink: 0;`}
+              >
+                0{i + 1}
+              </span>
+              <!-- Title -->
+              <h3
+                class="font-heading"
+                style={`font-size: 1.25rem; font-weight: 400; color: #3D3028; letter-spacing: 0.02em; flex: 1;`}
+              >
+                {service.title}
+              </h3>
+            </div>
+
+            <!-- Card body — content + image -->
+            <div
+              class="card-body"
+              style="flex: 1; display: grid; grid-template-columns: 1fr 1fr; min-height: 0; overflow: hidden;"
+            >
+              <!-- LEFT: text content (scrollable) -->
+              <div
+                class="card-content"
+                style="display: flex; flex-direction: column; justify-content: center; padding: 3rem 3rem 4rem 5vw; overflow-y: auto;"
+              >
+                <h4
+                  class="font-heading"
+                  style={`font-size: clamp(2rem, 8vw, 4.5rem); font-weight: 300; color: #3D3028; line-height: 1.05; margin-bottom: 1.5rem; flex-shrink: 0;`}
+                >
+                  {service.title}
+                </h4>
+
+                <ul class="sub-treatments font-body">
+                  {service.subTreatments.map((treatment) => (
+                    <li>{treatment}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <!-- RIGHT: service image -->
+              <div
+                class="card-image"
+                style="position: relative; overflow: hidden; height: 100%;"
+              >
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  style="width: 100%; height: 100%; object-fit: cover; object-position: center;"
+                  width={800}
+                  height={900}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    })}
+  </div>
+
+</section>
+
+<style>
+  /* ─── Section ─────────────────────────────────────────── */
+  .services-section {
+    background-color: var(--color-arena-light, #FAF6F1);
+  }
+
+  /* ─── Section header ──────────────────────────────────── */
+  .services-header {
+    text-align: center;
+    padding: 6rem 1rem 4rem;
+  }
+
+  .services-eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #A63228;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+  /* ─── Sub-treatments list ─────────────────────────────── */
+  .sub-treatments {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex-shrink: 0;
+  }
+
+  .sub-treatments li {
+    font-size: clamp(0.7rem, 2vw, 0.85rem);
+    font-weight: 400;
+    color: #5C4E44;
+    line-height: 1.6;
+    padding-left: 1rem;
+    position: relative;
+  }
+
+  .sub-treatments li::before {
+    content: "·";
+    position: absolute;
+    left: 0;
+    color: #A63228;
+    font-weight: 700;
+  }
+
+  /* ─── CTA button ──────────────────────────────────────── */
+  .card-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: 1px solid;
+    border-radius: 2rem;
+    padding: 0.75rem 1.75rem;
+    text-decoration: none;
+    transition: background-color 0.25s ease, color 0.25s ease;
+    align-self: flex-start;
+    white-space: nowrap;
+  }
+
+  .card-cta:hover {
+    background-color: #A63228;
+    border-color: #A63228;
+    color: #fff !important;
+  }
+
+  /* ─── Mobile ──────────────────────────────────────────── */
+  @media (max-width: 767px) {
+    .card-body {
+      grid-template-columns: 1fr !important;
+      grid-template-rows: 50fr 50fr;
+      height: 100%;
+    }
+    .card-content {
+      padding: 2rem 1.5rem 1rem 1.5rem !important;
+      order: 1;
+    }
+    .card-image {
+      order: 2;
+      height: 100% !important;
+    }
+  }
+
+  /* ─── Tablet ──────────────────────────────────────────── */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .card-content {
+      padding: 3rem 2.5rem 3rem 3rem !important;
+    }
+  }
+</style>

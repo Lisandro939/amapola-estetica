@@ -1,0 +1,55 @@
+---
+import logoImg from "../assets/logo-amapola.jpeg";
+import { Image } from "astro:assets";
+---
+
+<nav
+  id="navbar"
+  class="fixed top-0 left-0 right-0 z-[200] bg-transparent transition-all duration-300"
+>
+  <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+    <a href="#inicio" class="flex items-center gap-2">
+      <Image
+        src={logoImg}
+        alt="Estética Amapola"
+        width={44}
+        height={44}
+        class="rounded-full object-cover"
+      />
+      <span class="font-heading text-xl font-light text-texto hidden sm:inline">
+        Amapola
+      </span>
+    </a>
+
+    <!-- Desktop nav -->
+    <ul class="hidden md:flex items-center gap-8">
+      <li><a href="#inicio" class="text-sm font-light tracking-wide text-texto hover:text-amapola transition-colors">Inicio</a></li>
+      <li><a href="#nosotros" class="text-sm font-light tracking-wide text-texto hover:text-amapola transition-colors">Nosotros</a></li>
+      <li><a href="#servicios" class="text-sm font-light tracking-wide text-texto hover:text-amapola transition-colors">Servicios</a></li>
+      <li><a href="#resenas" class="text-sm font-light tracking-wide text-texto hover:text-amapola transition-colors">Reseñas</a></li>
+      <li><a href="#contacto" class="text-sm font-light tracking-wide text-texto hover:text-amapola transition-colors">Contacto</a></li>
+    </ul>
+
+    <!-- Mobile hamburger -->
+    <button
+      id="menu-btn"
+      class="md:hidden flex flex-col gap-1.5 p-2"
+      aria-label="Abrir menú"
+    >
+      <span class="block w-6 h-0.5 bg-texto"></span>
+      <span class="block w-6 h-0.5 bg-texto"></span>
+      <span class="block w-6 h-0.5 bg-texto"></span>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-sm border-t border-arena-dark/20">
+    <ul class="flex flex-col items-center gap-4 py-6">
+      <li><a href="#inicio" class="text-base font-light tracking-wide text-texto hover:text-amapola transition-colors">Inicio</a></li>
+      <li><a href="#servicios" class="text-base font-light tracking-wide text-texto hover:text-amapola transition-colors">Servicios</a></li>
+      <li><a href="#nosotros" class="text-base font-light tracking-wide text-texto hover:text-amapola transition-colors">Nosotros</a></li>
+      <li><a href="#resenas" class="text-base font-light tracking-wide text-texto hover:text-amapola transition-colors">Reseñas</a></li>
+      <li><a href="#contacto" class="text-base font-light tracking-wide text-texto hover:text-amapola transition-colors">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
