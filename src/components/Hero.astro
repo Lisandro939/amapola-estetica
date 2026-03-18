@@ -1,51 +1,200 @@
 ---
-import logoImg from "../assets/logo-amapola.jpeg";
+import logoImg from "../assets/logo-amapola.png";
 import { Image } from "astro:assets";
 ---
 
-<section
-  id="inicio"
-  class="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-arena-light via-arena to-white"
->
-  <!-- Subtle decorative circles -->
-  <div class="absolute top-20 left-10 w-64 h-64 bg-amapola/5 rounded-full blur-3xl"></div>
-  <div class="absolute bottom-20 right-10 w-80 h-80 bg-arena-dark/20 rounded-full blur-3xl"></div>
-
-  <div class="relative z-10 text-center px-4 py-20">
-    <div class="reveal mb-8">
+<section id="inicio" class="hero">
+  <div class="hero__inner">
+    <!-- LEFT: text card -->
+    <div class="hero__card">
       <Image
         src={logoImg}
         alt="Logo Estética Amapola"
-        width={160}
-        height={160}
-        class="mx-auto rounded-full shadow-lg object-cover"
+        width={320}
+        height={320}
+        class="hero__logo"
       />
-    </div>
-
-    <h1 class="reveal font-heading text-5xl md:text-7xl font-light text-texto mb-4" style="transition-delay: 0.15s;">
-      Estética Amapola
-    </h1>
-
-    <p class="reveal font-body text-lg md:text-xl font-light text-texto-light max-w-lg mx-auto mb-10" style="transition-delay: 0.3s;">
-      Tu espacio de cuidado personal, donde la belleza se encuentra con el bienestar
-    </p>
-
-    <div class="reveal" style="transition-delay: 0.45s;">
+      <span class="hero__tagline">Más de 11 años cuidándote</span>
+      <h1 class="hero__heading">Estética Amapola</h1>
+      <p class="hero__description">
+        En nuestro centro de estética creemos que cada persona es única. Por eso,
+        nos enfocamos en escucharte, entender tus necesidades y acompañarte en
+        cada paso de tu cuidado personal. Más que tratamientos, ofrecemos momentos
+        de bienestar, relajación y conexión con vos misma/o. Queremos que cada vez
+        que nos visites, te sientas cómoda, cuidada y renovada.
+      </p>
       <a
-        href="https://wa.me/5402615362369?text=Hola%2C%20quiero%20reservar%20un%20turno"
+        href="https://wa.me/5402615362369"
         target="_blank"
         rel="noopener noreferrer"
-        class="inline-block bg-amapola text-white px-8 py-3.5 rounded-full text-sm font-medium tracking-wider uppercase hover:bg-amapola-dark transition-colors shadow-lg hover:shadow-xl"
+        class="hero__cta"
       >
         Reservá tu turno
       </a>
     </div>
-  </div>
 
-  <!-- Scroll indicator -->
-  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-    <svg class="w-6 h-6 text-texto-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-    </svg>
+    <!-- RIGHT: photo card -->
+    <div class="hero__photo">
+      <span>Foto recepción</span>
+    </div>
   </div>
 </section>
+
+<style>
+  .hero {
+    padding: 7rem 2rem 4rem;
+    animation: heroFadeIn 0.8s ease both;
+  }
+
+  @keyframes heroFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  /* INNER WRAPPER — two cards side by side on desktop */
+  .hero__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  /* LEFT: text card */
+  .hero__card {
+    background: #fff;
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* RIGHT: photo card */
+  .hero__photo {
+    background-color: #ede0d4;
+    min-height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero__photo span {
+    font-family: "Raleway", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #a63228;
+    opacity: 0.5;
+  }
+
+  .hero__logo {
+    width: 320px;
+    height: 320px;
+    object-fit: contain;
+  }
+
+  .hero__tagline {
+    display: block;
+    font-family: "Raleway", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #a63228;
+    margin-bottom: 0.75rem;
+  }
+
+  .hero__heading {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    font-weight: 300;
+    color: #3d3028;
+    line-height: 1.1;
+    margin: 0 0 1.25rem;
+  }
+
+  .hero__description {
+    font-family: "Raleway", sans-serif;
+    font-size: clamp(0.82rem, 2.5vw, 0.92rem);
+    font-weight: 300;
+    color: #5c4e44;
+    line-height: 1.8;
+    margin: 0 0 2rem;
+    max-width: 480px;
+  }
+
+  .hero__cta {
+    display: inline-block;
+    font-family: "Raleway", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #a63228;
+    background: transparent;
+    border: 1.5px solid #a63228;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  .hero__cta:hover {
+    background-color: #a63228;
+    color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding: 4rem 0 0 0;
+    }
+
+    .hero__inner {
+      gap: 0;
+    }
+  }
+
+  /* DESKTOP */
+  @media (min-width: 768px) {
+    .hero {
+      padding: 7rem 4rem 5rem;
+    }
+
+    .hero__inner {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 1.5rem;
+    }
+
+    /* Text card: wider than tall (landscape) */
+    .hero__card {
+      flex: 0 0 62%;
+      align-items: flex-start;
+      text-align: left;
+      padding: 2rem 2.5rem;
+    }
+
+    .hero__logo {
+      width: 320px;
+      height: 320px;
+    }
+
+    .hero__heading {
+      font-size: clamp(2rem, 3.5vw, 3.2rem);
+      margin-bottom: 1rem;
+    }
+
+    .hero__description {
+      font-size: 0.88rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+    }
+
+    /* Photo card: taller than wide (portrait) */
+    .hero__photo {
+      flex: 0 0 50%;
+      min-height: 700px;
+    }
+  }
+</style>
