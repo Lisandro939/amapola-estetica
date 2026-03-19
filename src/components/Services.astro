@@ -7,19 +7,17 @@ import masajes from '../assets/masajes.png';
 import manicura from '../assets/manicura.png';
 import pestanas from '../assets/pestañas.png';
 
-const NAVBAR_HEIGHT = 68;
-
 const services = [
   {
     title: "Depilación",
     description:
       "Ofrecemos depilación tradicional y depilación definitiva, adaptada a tu tipo de piel. Atención profesional y personalizada junto con productos y herramientas de calidad.",
     subTreatments: [
-      "Definitiva Soprano Ice",
-      "Depilación con cera",
-      "Perfilado de cejas",
-      "Laminado de cejas",
-      "Depilación con hilo",
+      { name: "Definitiva Soprano Ice", description: "¿Qué es?\n\nLa depilación láser Soprano es una tecnología de depilación láser de diodo que utiliza pulsos de baja energía y alta repetición para debilitar el vello de forma progresiva. A diferencia de otros láseres de diodo, la Soprano no elimina el vello folículo por folículo con altas energías, sino que calienta la dermis de forma gradual para eliminar el folículo permanentemente.\n\nCaracterísticas principales:\n\n*Tecnología:* Láser de diodo con pulsos de baja energía y alta repetición.\n\n*Mecanismo de acción:* Calienta la dermis de forma gradual para eliminar el folículo permanentemente.\n\n*Beneficios:*\nPuede ser utilizada en todo tipo de piel y vello. Permite depilar pieles bronceadas.\n\n*Ventajas:*\nMenos dolor y más cómoda que otros métodos de depilación. No requiere analgésicos o sistemas de enfriamiento adicionales.\n\n*Proceso de depilación:*\nSe marca una cuadrícula en la zona a tratar. Se pasa el láser repetidamente sobre la zona, distribuyendo la energía en varias pasadas. La energía del láser calienta el folículo piloso, debilitándolo y destruyéndolo.\nSe repite el proceso en las sesiones sucesivas para asegurar la eliminación completa del vello.\n\n*Número de sesiones:*\nEl número de sesiones necesarias varía según el tipo de vello, la zona a tratar y la respuesta individual del paciente. En promedio, se recomiendan de 6 a 8 sesiones para obtener resultados óptimos y duraderos.\nLas sesiones se programan con intervalos de tiempo adecuados (4 a 8 semanas) para permitir que los folículos pilosos pasen por las diferentes fases del ciclo de crecimiento.\n\n*Resultados:*\nLos resultados pueden durar varios meses o incluso años, y muchas personas experimentan una reducción permanente del vello. La caída del vello puede producirse entre una y tres semanas después de cada sesión. Después de completar el tratamiento, la piel suele quedar suave y sin vello." },
+      { name: "Depilación con cera", description: "" },
+      { name: "Perfilado de cejas", description: "" },
+      { name: "Laminado de cejas", description: "" },
+      { name: "Depilación con hilo", description: "La depilación con hilo es una técnica profesional que consiste en enrollar un hilo de algodón sobre cada vello para así arrancarlo de raíz. De esta forma se consigue un acabado muy limpio ya que es una técnica muy eficaz en este sentido. Además, esta técnica no requiere ningún tipo de producto cosmético para su aplicación. Consigue eliminar el vello de forma eficaz y precisa en zonas como las cejas, las patillas o el labio superior." },
     ],
     gradientFrom: "#f8d7d7",
     gradientTo: "#f0b8b8",
@@ -34,17 +32,21 @@ const services = [
     description:
       "Tratamientos específicos para limpieza, renovación y mantenimiento de la piel del rostro. Cada sesión se adapta al tipo de piel y a los objetivos de cada persona.",
     subTreatments: [
-      "Peeling enzimático",
-      "Peeling de invierno",
-      "Peeling de algas",
-      "Peeling mecánico con punta de diamantes",
-      "Limpieza profunda con extracciones",
-      "Dermaplaning",
-      "Dermapen",
-      "Nano botox",
-      "Hilos líquidos, sólidos y planos",
-      "Radiofrecuencia",
-      "Tratamiento para papada",
+      { name: "Peeling enzimático", description: "" },
+      { name: "Peeling de invierno", description: "" },
+      { name: "Peeling de algas", description: "" },
+      { name: "Peeling mecánico con punta de diamantes", description: "" },
+      { name: "Limpieza profunda con extracciones", description: "" },
+      { name: "Dermaplaning", description: "" },
+      { name: "Dermapen", description: "" },
+      { name: "Nano botox", description: "" },
+      { name: "Hilos líquidos, sólidos y planos", description: "" },
+      { name: "Radiofrecuencia", description: "" },
+      { name: "Tratamiento para papada", description: "" },
+      { name: "Hollywood peel", description: "¿Qué es?\nEs un tratamiento láser que ayuda a rejuvenecer la apariencia de la piel dañada o envejecida. Este suave tratamiento es seguro en todos los tipos de piel y en cualquier momento del año, incluso en verano. Es perfecto para manejar tu piel facial tanto de imperfecciones cutáneas como de manchas sin el tiempo de recuperación que requieren otros tratamientos láser.\n\nEl procedimiento es extremadamente seguro y suave para la piel, es indoloro y se puede seguir con las actividades normales.\n\nEstá indicado para:\n👉 Pieles grasas\n👉 Cerrar los poros\n👉 Unificar los tonos de piel\n👉 Dar luminosidad\n👉 Suavizar las arrugas finas dejando un aspecto más joven.\n\nUna vez terminado el tratamiento podrías sentir algo de picazón o molestia, o presentar una leve inflamación o enrojecimientos, pero en cualquiera de los casos se pasarán a los pocos minutos." },
+      { name: "Oxígenoterapia", description: "" },
+      { name: "HIFU", description: "¿Qué es?\nSe trata de ultrasonido focalizado de alta intensidad. Mediante su aplicación reactiva la producción de colágeno." },
+      { name: "Exilis", description: "¿Qué es?\nEs un tratamiento no invasivo que utiliza tecnología de radiofrecuencia y ultrasonido para reducir la grasa y la flacidez en el cuerpo. Además en rostro se utiliza para arrugas y flacidez.\n\n¿Cómo funciona?\nEl tratamiento funciona calentando la piel y la capa subcutánea debajo de ella mediante ondas de radiofrecuencia y ultrasonido. Esto estimula la producción de colágeno y elastina, que son dos proteínas que ayudan a mantener la piel firme y tonificada. A medida que se produce más colágeno y elastina, la piel se vuelve más firme y la flacidez disminuye.\n\nAdemás, el calentamiento también ayuda a descomponer las células de grasa en el área tratada. El cuerpo luego elimina naturalmente estas células a través del sistema linfático, lo que resulta en una reducción de la grasa y una mejora en la forma corporal." },
     ],
     gradientFrom: "#fde8d8",
     gradientTo: "#f5c9aa",
@@ -59,17 +61,19 @@ const services = [
     description:
       "Protocolos orientados a mejorar la firmeza, la textura y el aspecto general de la piel corporal. Incluyen opciones modeladoras, reafirmantes, exfoliantes y relajantes.",
     subTreatments: [
-      "Radiofrecuencia",
-      "Ultracavitación",
-      "Ultrasonido",
-      "Vela Slim",
-      "Criolipólisis",
-      "HiFu",
-      "Electrodos",
-      "Copas colombianas con electrodos",
-      "Teslagen / Body Up",
-      "Mantas térmicas",
-      "Presoterapia",
+      { name: "Radiofrecuencia", description: "" },
+      { name: "Ultracavitación", description: "" },
+      { name: "Ultrasonido", description: "" },
+      { name: "Vela Slim", description: "Es un tratamiento no-invasivo que reduce la celulitis y que modela el contorno corporal.\n\nRealiza simultáneamente varias funciones:\n\n*El masaje, para la movilización de grasas.\n\n*La radiofrecuencia bipolar, para la destrucción de adipocitos y reafirmación de la piel.\n\n*Los infrarrojos, para potenciar los efectos de la radiofrecuencia.\n\n*Y la vacuum terapia, también conocida como endermología, para la movilización de tejido adiposo.\n\nSe puede observar una mejoría gradual en la zona tratada tras el primer tratamiento, la superficie de la piel se nota más lisa y firme. Los resultados de la reducción de perfil se ven entre la primera y segunda sesión y la mejoría de la celulitis en tan sólo 6 sesiones.\n\nVelaSlim puede aplicarse en distintas regiones corporales como piernas, glúteos, muslos, abdomen, costados o brazos, ya que dispone de dos cabezales distintos diseñados para grandes y pequeñas áreas corporales." },
+      { name: "Criolipólisis", description: "Es un procedimiento médico no invasivo que utiliza bajas temperaturas para eliminar la grasa localizada. Se basa en la idea de que las células grasas son más sensibles al frío que otros tejidos, por lo que pueden ser dañadas y eliminadas sin afectar la piel circundante." },
+      { name: "Splenda", description: "Elimina grasa localizada y modela el cuerpo con este tratamiento no invasivo, sin dolor que combina ultracavitacion y radiofrecuencia.\nSí las dos terapias en un mismo tratamiento y trabajando juntas.\n\nUltracavitación es un procedimiento efectivo para la eliminación de adiposidades localizadas.\n¿Cómo funciona?\nEmite ondas ultrasónicas, estas producen nano burbujas que van creciendo lentamente para luego implosionar y generar ondas de choque dentro del panículo adiposo. Las moléculas de ácido graso son libradas en el torrente sanguíneo para ser metabolizadas y eliminadas por el sistema linfático y las vías urinarias.\n\nRadiofrecuencia corporal es un tratamiento que utiliza ondas electromagnéticas de alta frecuencia para mejorar la apariencia de la piel en diferentes partes del cuerpo como brazos, muslos, glúteos, piernas, abdomen. A través de la aplicación de estas ondas, se logra un calentamiento controlado de las capas más profundas de la piel que estimula la formación de colágeno, promueve la regeneración de la piel y ayuda a combatir los cúmulos de grasa.\n\nIndicado para:\n👉 Adiposidad localizada\n👉 Celulitis\n👉 Flacidez\n👉 Estrías\n\n" },
+      { name: "HIFU", description: "¿Qué es HIFU?\nEs una tecnología avanzada que utiliza la energía del ultrasonido focalizado de alta intensidad para direccionar y destruir las células de grasa localizada en zonas específicas del cuerpo.\n\nMediante este tratamiento se logra mejorar la flacidez corporal, dándole una mayor tensión a la piel. Además reduce la celulitis y las estrías." },
+      { name: "Exilis", description: "¿Qué es Exilis ultra 360°?\nEs un tratamiento no invasivo que utiliza tecnología de radiofrecuencia y ultrasonido para reducir la grasa y la flacidez en el cuerpo. Además en rostro se utiliza para arrugas y flacidez.\n\n¿Cómo funciona Exilis?\nEl tratamiento funciona calentando la piel y la capa subcutánea debajo de ella mediante ondas de radiofrecuencia y ultrasonido. Esto estimula la producción de colágeno y elastina, que son dos proteínas que ayudan a mantener la piel firme y tonificada. A medida que se produce más colágeno y elastina, la piel se vuelve más firme y la flacidez disminuye.\n\nAdemás, el calentamiento también ayuda a descomponer las células de grasa en el área tratada. El cuerpo luego elimina naturalmente estas células a través del sistema linfático, lo que resulta en una reducción de la grasa y una mejora en la forma corporal.\n\n⛔ NO es apto para aquellos que tienen marcapasos o otros dispositivos médicos implantados, mujeres embarazadas o que están amamantando, o aquellos que tienen una infección en el área a tratar.\n\n¿Cuántas sesiones se necesitan?\nEl número depende del área a tratar y los objetivos del paciente. Por lo general, se recomiendan de 2 a 4 sesiones con un intervalo de 1 mes entre cada sesión para obtener resultados óptimos." },
+      { name: "Electrodos", description: "" },
+      { name: "Copas colombianas con electrodos", description: "COPAS COLOMBIANAS\n👉 Mejora de la circulación sanguínea.\n👉 Aumento de la producción de colágeno.\n👉 Reducción de la celulitis.\n👉 Promueve el drenaje linfático que elimina las grasas.\n👉 Aumento de glúteos" },
+      { name: "Teslagen / Body Up", description: "" },
+      { name: "Mantas térmicas", description: "" },
+      { name: "Drenaje linfático manual y mecánico (presoterapia)", description: "El drenaje linfático es una técnica terapéutica que ha ganado popularidad en los últimos años debido a sus numerosos beneficios para la salud.\n\n¿Qué es y para qué sirve el drenaje linfático?\n\nEl drenaje linfático es una técnica terapéutica de masaje que tiene como objetivo estimular el sistema linfático para mejorar el flujo de la linfa, un líquido que transporta nutrientes, desechos y toxinas por todo el cuerpo. Este sistema es crucial para la función inmunológica y el drenaje de fluidos, por lo que un drenaje linfático adecuado puede ayudar a mejorar la circulación, reducir la retención de líquidos, eliminar toxinas y fortalecer el sistema inmunológico.\n\nAdemás, el drenaje linfático es recomendable para eliminar la celulitis y mejorar sus efectos, así como para tratar edemas postoperatorios o cicatrices, gracias a su capacidad antiinflamatoria y analgésica en las fibras musculares lisas.\n\nDrenaje linfático manual vs. con máquina\n\nExisten dos maneras de realizar este tratamiento terapéutico: el drenaje linfático manual (DLM) y el realizado con aparatología especializada, como la presoterapia.\n\nEl drenaje linfático manual lo lleva a cabo un/a terapeuta especializada que realiza con suaves movimientos circulares, repetitivos y de bombeo con las manos. El profesional puede analizar las zonas de mayor afección, adaptando y focalizando la terapia a las necesidades de cada paciente.\n\nPor otro lado, el drenaje linfático realizado con un aparato de presoterapia utiliza un traje pneumático que efectúa bombeo y presión controlada y agradable para estimular el sistema linfático. Con programas personalizables estimulan el sistema circulatorio, contribuyen a la eliminación de líquidos, mejoran la apariencia de la piel y consiguen un efecto de relajación y bienestar, por lo que está muy indicado en problemas como piernas cansadas, edema, celulitis, etc.\n\nEn consecuencia, ambas modalidades son efectivas y pueden ser utilizadas para distintos momentos del tratamiento de manera combinada, complementaria o única, según las necesidades específicas de cada paciente.\n\nBeneficios comprobados del drenaje linfático\n\nLos beneficios del drenaje linfático son numerosos y están respaldados por la investigación científica. Algunos de los beneficios más comprobados incluyen:\n\n• Reducción de la retención de líquidos y la hinchazón\n• Mejora de la circulación sanguínea y linfática\n• Estimulación del sistema inmunológico\n• Alivio del dolor y la inflamación\n• Mejora de la apariencia de la piel, incluida la reducción de celulitis y la piel de naranja\n• Mejora el bienestar general\n• Contribuye a la relajación y a la reducción de estrés\n\nContraindicaciones del masaje linfático\n\nAunque el drenaje linfático tanto manual como con aparatología puede ser beneficioso para muchas personas, existen algunas contraindicaciones importantes a tener en cuenta. Las personas que sufren:\n\n• Infecciones agudas\n• Trombosis venosa profunda\n• Insuficiencia cardíaca congestiva\n• Cáncer o tumores activos\n• Flebitis\n• Hipertensión o hipotensión no controlada\n\nDeben consultar con un profesional de la salud antes de someterse a un drenaje linfático para asegurarse de que no existan contraindicaciones que puedan poner en riesgo tu salud." },
     ],
     gradientFrom: "#d8ead8",
     gradientTo: "#b8d4b8",
@@ -84,11 +88,11 @@ const services = [
     description:
       "Momentos de bienestar pensados para aliviar tensiones, activar la circulación y reconectar con tu cuerpo. Técnicas personalizadas según tus necesidades.",
     subTreatments: [
-      "Relajantes",
-      "Descontracturantes",
-      "Con piedras calientes",
-      "Drenaje linfático",
-      "Reductores",
+      { name: "Relajantes", description: "Es una técnica terapéutica que utiliza movimientos suaves y rítmicos para aliviar la tensión muscular, mejorar la circulación y promover la relajación general del cuerpo y mente. El objetivo principal es reducir el estrés y la ansiedad, aliviando el dolor muscular y mejorando el bienestar general." },
+      { name: "Descontracturantes", description: "El masaje descontracturante es una técnica de terapia manual que consiste en emplear maniobras profundas e intensas, que van dirigidas a zonas de dolor y que buscan eliminar las contracturas y puntos gatillo, ayudando a recuperar la función normal del músculo." },
+      { name: "Con piedras calientes", description: "¿Qué es un masaje con piedras calientes?\n\nEl Masaje con Piedras Calientes es una relajante terapia de origen oriental que trabaja no sólo en el plano físico sino también en el mental, ya que ayuda a relajar tensiones musculares y a conseguir un perfecto equilibrio energético.\n\nPara la realización de este masaje se utilizan piedras lisas de origen volcánico que se deslizan sobre la piel mediante un relajante masaje. Posteriormente, se colocan ejerciendo una ligera presión sobre los chakras, los meridianos o los puntos de acupuntura presentes en la espalda, cara, brazos y piernas, activando de esta forma el flujo vital y consiguiendo una completa armonía con uno mismo.\n\nBeneficios de un masaje con piedras calientes\n\nLa temperatura de las piedras promueve la mejora de la circulación sanguínea, la eliminación de toxinas y la relajación de articulaciones y músculos rígidos o doloridos. También se puede combinar el uso de estas piedras calientes con el de piedras frías. La alternancia de temperaturas sirve para estimular aún más el riego sanguíneo.\n\nEste masaje se puede compaginar, si se desea, con otras técnicas de masaje para aprovechar la situación de relajación de los músculos." },
+      { name: "Drenaje linfático", description: "" },
+      { name: "Reductores", description: "Los masajes reductores son técnicas manuales o con aparatos que se utilizan para reducir la grasa localizada en áreas específicas del cuerpo, como el abdomen, caderas, glúteos y muslos. Su objetivo principal es mejorar la apariencia de la piel, estimular la circulación y mejorar el metabolismo.\n\n¿Cómo funcionan?\n\nMovimientos específicos:\nLos masajes reductores utilizan movimientos de presión, amasamiento y pellizcado para movilizar las células de grasa.\n\nEstimulación de la circulación:\nLa presión y los movimientos del masaje mejoran el flujo sanguíneo y linfático, lo que ayuda a eliminar toxinas y a activar el metabolismo local.\n\nReducción de medidas:\nAl movilizar la grasa y mejorar la circulación, los masajes reductores pueden ayudar a reducir el volumen en las áreas tratadas." },
     ],
     gradientFrom: "#e8ddd0",
     gradientTo: "#d4c4b0",
@@ -103,10 +107,10 @@ const services = [
     description:
       "Servicio de manicuria profesional con las últimas técnicas para el cuidado y embellecimiento de tus manos. Resultados duraderos y de calidad.",
     subTreatments: [
-      "Esmaltado semipermanente",
-      "Kapping",
-      "Uñas esculpidas",
-      "Soft gel",
+      { name: "Esmaltado semipermanente", description: "" },
+      { name: "Kapping", description: "" },
+      { name: "Uñas esculpidas", description: "" },
+      { name: "Soft gel", description: "" },
     ],
     gradientFrom: "#fdebc8",
     gradientTo: "#f5cf90",
@@ -121,11 +125,11 @@ const services = [
     description:
       "Realzá tu mirada con nuestros tratamientos de pestañas. Técnicas profesionales para un efecto natural o dramático, adaptado a lo que buscás.",
     subTreatments: [
-      "Extensiones",
-      "Permanente",
-      "Lifting",
-      "Tinte",
-      "Keratina y botox",
+      { name: "Extensiones", description: "La extensión de pestañas es un procedimiento a través del cual se colocan pestañas artificiales sobre las pestañas naturales. A través de este procedimiento se puede modificar la longitud, curvatura, cantidad y grosor de las pestañas naturales, realzando así la mirada y modificando el aspecto del encuadre del rostro." },
+      { name: "Permanente", description: "" },
+      { name: "Lifting", description: "Este es un procedimiento a través del cual se produce una elevación de la pestaña natural para lograr una apariencia bonita y realzada de las mismas. Este procedimiento puede durar hasta dos meses y requiere de escaso o nulos cuidados." },
+      { name: "Tinte", description: "" },
+      { name: "Keratina y botox", description: "" },
     ],
     gradientFrom: "#e8d8f0",
     gradientTo: "#d0b8e0",
@@ -138,53 +142,48 @@ const services = [
 ];
 ---
 
-<section id="servicios" class="services-section">
+<section id="servicios" class="bg-arena-light">
   <!-- Section header — scrolls away normally, not sticky -->
-  <div class="services-header">
-    <p class="services-eyebrow font-body">Lo que hacemos</p>
-    <h2 class="reveal font-heading text-texto" style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 300; margin-bottom: 1rem; line-height: 1.1;">
+  <div class="text-center px-4 pt-24 pb-16">
+    <p class="font-body text-xs tracking-[0.25em] uppercase text-[#A63228] font-medium mb-4">Lo que hacemos</p>
+    <h2 class="reveal font-heading text-texto text-[clamp(2.5rem,5vw,4rem)] font-light mb-4 leading-[1.1]">
       Nuestros Servicios
     </h2>
-    <p class="reveal font-body" style="color: #6B5D52; font-size: 1.125rem; font-weight: 300; transition-delay: 0.1s;">
+    <p class="reveal font-body text-texto-light text-lg font-light [transition-delay:0.1s]">
       Elegí el tratamiento ideal para vos
     </p>
-    <div class="reveal w-16 h-px bg-amapola mx-auto" style="margin-top: 2rem; transition-delay: 0.2s;"></div>
+    <div class="reveal w-16 h-px bg-amapola mx-auto mt-8 [transition-delay:0.2s]"></div>
   </div>
 
   <!-- Stacking cards container -->
-  <div class="stack-container">
+  <div>
     {services.map((service, i) => {
-      const zIndex = (i + 1) * 10;
-
       return (
-        <div
-          class="card-wrapper"
-          style={`position: sticky; top: ${NAVBAR_HEIGHT}px; z-index: ${zIndex}; min-height: ${i === services.length - 1 ? 'auto' : '100svh'};`}
-        >
+        <div>
           <div
-            class="card-inner"
-            style={`background-color: ${service.cardBg}; height: calc(100svh - ${NAVBAR_HEIGHT}px); min-height: calc(100svh - ${NAVBAR_HEIGHT}px); display: flex; flex-direction: column; border-radius: 0; overflow: hidden; box-shadow: 0 -2px 30px rgba(0,0,0,0.08);`}
+            class="flex flex-col shadow-[0_-2px_30px_rgba(0,0,0,0.08)]"
+            style={`background-color: ${service.cardBg};`}
           >
             <!-- Header bar -->
             <div
-              class="card-header"
-              style={`background-color: ${service.headerBg}; display: flex; align-items: center; padding: 1.2rem 2rem; gap: 1rem; flex-shrink: 0;`}
+              class="flex items-center px-8 py-[1.2rem] gap-4 shrink-0"
+              style={`background-color: ${service.headerBg};`}
             >
               <!-- Left accent bar -->
               <div
-                style={`width: 4px; height: 2rem; background-color: ${service.accentColor}; border-radius: 2px; flex-shrink: 0;`}
+                class="w-1 h-8 rounded-sm shrink-0"
+                style={`background-color: ${service.accentColor};`}
               ></div>
               <!-- Index -->
               <span
-                class="font-body"
-                style={`font-size: 0.75rem; letter-spacing: 0.2em; font-weight: 500; color: ${service.accentColor}; text-transform: uppercase; flex-shrink: 0;`}
+                class="font-body text-xs tracking-[0.2em] font-medium uppercase shrink-0"
+                style={`color: ${service.accentColor};`}
               >
                 0{i + 1}
               </span>
               <!-- Title -->
               <h3
-                class="font-heading"
-                style={`font-size: 1.25rem; font-weight: 400; color: #3D3028; letter-spacing: 0.02em; flex: 1;`}
+                class="font-heading text-xl font-normal text-[#3D3028] tracking-[0.02em] flex-1"
               >
                 {service.title}
               </h3>
@@ -192,37 +191,65 @@ const services = [
 
             <!-- Card body — content + image -->
             <div
-              class="card-body"
-              style="flex: 1; display: grid; grid-template-columns: 1fr 1fr; min-height: 0; overflow: hidden;"
+              class="grid grid-cols-1 md:grid-cols-2 max-md:grid-rows-[60fr_40fr]"
             >
-              <!-- LEFT: text content (scrollable) -->
+              <!-- LEFT: text content -->
               <div
-                class="card-content"
-                style="display: flex; flex-direction: column; justify-content: center; padding: 3rem 3rem 4rem 5vw; overflow-y: hidden;"
+                class="flex flex-col justify-start px-6 py-6 md:px-10 md:py-8 lg:pl-[5vw] lg:pr-12 lg:py-12 max-md:order-1"
               >
                 <h4
-                  class="font-heading"
-                  style={`font-size: clamp(2rem, 8vw, 4.5rem); font-weight: 300; color: #3D3028; line-height: 1.05; margin-bottom: 1.5rem; flex-shrink: 0;`}
+                  class="font-heading text-[clamp(2rem,8vw,4.5rem)] font-light text-[#3D3028] leading-[1.05] mb-6 shrink-0"
                 >
                   {service.title}
                 </h4>
 
-                <ul class="sub-treatments font-body">
+                <!-- Sub-treatments accordion list -->
+                <div class="flex flex-col gap-0 shrink-0" data-accordion-group>
                   {service.subTreatments.map((treatment) => (
-                    <li>{treatment}</li>
+                    <div
+                      class="border-b border-[#3D3028]/10"
+                    >
+                      {treatment.description && (
+                        <details class="group">
+                          <summary class="flex items-center justify-between cursor-pointer py-3 px-4 select-none list-none [&::-webkit-details-marker]:hidden hover:bg-[#3D3028]/5 transition-colors duration-200 rounded-sm">
+                            <span class="font-body text-[clamp(0.75rem,2vw,0.9rem)] font-normal text-[#5C4E44] leading-relaxed flex items-center gap-3">
+                              <span class="text-[#A63228] font-bold text-xs">·</span>
+                              {treatment.name}
+                            </span>
+                            <span class="text-[#A63228] text-xs font-body font-medium tracking-wide shrink-0 ml-4 group-open:hidden">
+                              Ver más
+                            </span>
+                            <span class="text-[#A63228] text-xs font-body font-medium tracking-wide shrink-0 ml-4 hidden group-open:inline">
+                              Cerrar
+                            </span>
+                          </summary>
+                          <div class="overflow-hidden transition-all duration-300 ease-in-out" data-accordion-content style="height: 0; opacity: 0;">
+                            <p class="font-body text-[clamp(0.7rem,1.8vw,0.825rem)] text-[#5C4E44]/80 leading-relaxed px-4 pb-3 pt-0 pl-[2.25rem] whitespace-pre-line">
+                              {treatment.description}
+                            </p>
+                          </div>
+                        </details>
+                      )}
+                      {!treatment.description && (
+                        <span class="font-body text-[clamp(0.75rem,2vw,0.9rem)] font-normal text-[#5C4E44] leading-relaxed flex items-center gap-3 py-3 px-4">
+                          <span class="text-[#A63228] font-bold text-xs">·</span>
+                          {treatment.name}
+                        </span>
+                      )}
+                    </div>
                   ))}
-                </ul>
+                </div>
+
               </div>
 
               <!-- RIGHT: service image -->
               <div
-                class="card-image"
-                style="position: relative; overflow: hidden; height: 100%;"
+                class="relative overflow-hidden h-full max-md:order-2"
               >
                 <Image
                   src={service.image}
                   alt={service.title}
-                  style="width: 100%; height: 100%; object-fit: cover; object-position: center;"
+                  class="w-full h-full object-cover object-center"
                   width={800}
                   height={900}
                 />
@@ -233,103 +260,92 @@ const services = [
       );
     })}
   </div>
-
 </section>
 
-<style>
-  /* ─── Section ─────────────────────────────────────────── */
-  .services-section {
-    background-color: var(--color-arena-light, #FAF6F1);
+<script>
+  function closeDetails(detail: HTMLDetailsElement): Promise<void> {
+    return new Promise((resolve) => {
+      const content = detail.querySelector('[data-accordion-content]') as HTMLElement;
+      if (!content) {
+        detail.removeAttribute('open');
+        resolve();
+        return;
+      }
+
+      content.style.height = `${content.scrollHeight}px`;
+      content.style.opacity = '1';
+
+      requestAnimationFrame(() => {
+        content.style.height = '0';
+        content.style.opacity = '0';
+
+        const onEnd = () => {
+          content.removeEventListener('transitionend', onEnd);
+          detail.removeAttribute('open');
+          resolve();
+        };
+        content.addEventListener('transitionend', onEnd, { once: true });
+
+        // Safety fallback in case transitionend doesn't fire
+        setTimeout(() => {
+          detail.removeAttribute('open');
+          resolve();
+        }, 350);
+      });
+    });
   }
 
-  /* ─── Section header ──────────────────────────────────── */
-  .services-header {
-    text-align: center;
-    padding: 6rem 1rem 4rem;
+  function openDetails(detail: HTMLDetailsElement): void {
+    detail.setAttribute('open', '');
+    const content = detail.querySelector('[data-accordion-content]') as HTMLElement;
+    if (!content) return;
+
+    content.style.height = '0';
+    content.style.opacity = '0';
+
+    requestAnimationFrame(() => {
+      content.style.height = `${content.scrollHeight}px`;
+      content.style.opacity = '1';
+
+      const onEnd = () => {
+        content.removeEventListener('transitionend', onEnd);
+        // After animation, set height to auto so it adapts to content changes
+        content.style.height = 'auto';
+      };
+      content.addEventListener('transitionend', onEnd, { once: true });
+    });
   }
 
-  .services-eyebrow {
-    font-size: 0.75rem;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: #A63228;
-    font-weight: 500;
-    margin-bottom: 1rem;
-  }
+  // Exclusive animated accordion
+  document.querySelectorAll('[data-accordion-group]').forEach((group) => {
+    const allDetails = group.querySelectorAll('details');
 
-  /* ─── Sub-treatments list ─────────────────────────────── */
-  .sub-treatments {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    flex-shrink: 0;
-  }
+    allDetails.forEach((detail) => {
+      const summary = detail.querySelector('summary');
+      if (!summary) return;
 
-  .sub-treatments li {
-    font-size: clamp(0.7rem, 2vw, 0.85rem);
-    font-weight: 400;
-    color: #5C4E44;
-    line-height: 1.6;
-    padding-left: 1rem;
-    position: relative;
-  }
+      summary.addEventListener('click', (e) => {
+        e.preventDefault();
 
-  .sub-treatments li::before {
-    content: "·";
-    position: absolute;
-    left: 0;
-    color: #A63228;
-    font-weight: 700;
-  }
+        if (detail.open) {
+          // Close this one
+          closeDetails(detail);
+        } else {
+          // Close any other open details in this group, then open this one
+          const closePromises: Promise<void>[] = [];
+          allDetails.forEach((other) => {
+            if (other !== detail && other.open) {
+              closePromises.push(closeDetails(other));
+            }
+          });
 
-  /* ─── CTA button ──────────────────────────────────────── */
-  .card-cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.8rem;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    border: 1px solid;
-    border-radius: 2rem;
-    padding: 0.75rem 1.75rem;
-    text-decoration: none;
-    transition: background-color 0.25s ease, color 0.25s ease;
-    align-self: flex-start;
-    white-space: nowrap;
-  }
+          // Open after others finish closing (or immediately if none open)
+          Promise.all(closePromises).then(() => {
+            openDetails(detail);
+          });
+        }
+      });
+    });
+  });
 
-  .card-cta:hover {
-    background-color: #A63228;
-    border-color: #A63228;
-    color: #fff !important;
-  }
-
-  /* ─── Mobile ──────────────────────────────────────────── */
-  @media (max-width: 767px) {
-    .card-body {
-      grid-template-columns: 1fr !important;
-      grid-template-rows: 60fr 40fr;
-      height: 100%;
-    }
-    .card-content {
-      padding: 2rem 1.5rem 1rem 1.5rem !important;
-      order: 1;
-    }
-    .card-image {
-      order: 2;
-      height: 100% !important;
-    }
-  }
-
-  /* ─── Tablet ──────────────────────────────────────────── */
-  @media (min-width: 768px) and (max-width: 1023px) {
-    .card-content {
-      padding: 3rem 2.5rem 3rem 3rem !important;
-    }
-  }
-</style>
+</script>
